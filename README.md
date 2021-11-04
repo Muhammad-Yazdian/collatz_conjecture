@@ -12,11 +12,10 @@ Despite its simple rules, the Collatz conjecture is still **an unsolved mathemat
 > Mathematics may not be ready for such problems.
 
 # This code
-Use this code to test your own number and see if it reaches to 1 or not.
+- Use this code to test your own number and see if it reaches to 1 or not.
+- Use [the range-of-values branch](https://github.com/Muhammad-Yazdian/collatz_conjecture/tree/range-of-values) to test a range of numbers. 
 
 # More
 - Proposed by Lothar Collatz in 1937
 - [More about Collatz Conjecture on Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture)
 - [List of unsolved problems in mathematics](https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics)
-
-Named after Lothar Collatz, 
