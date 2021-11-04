@@ -19,7 +19,7 @@
 #include<stdio.h>
 
 int main(void){
-  // Get user input
+  // Test for range of initial values
   unsigned int num = 0;
   unsigned int iterations = 0;
   printf("Collatz Conjecture\n");
