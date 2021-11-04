@@ -19,11 +19,11 @@
 #include<stdio.h>
 
 int main(void){
-  // Test for numbers 1 to 10
+  // Get user input
   unsigned int num = 0;
   unsigned int iterations = 0;
   printf("Collatz Conjecture\n");
-  printf("Enter an integer number: ");
+  printf("Enter an positive integer number: ");
   scanf("%d", &num);
   printf("Iteration #%d: %d\n", iterations, num);
 
