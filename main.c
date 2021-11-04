@@ -20,26 +20,32 @@
 
 int main(void){
   // Test for range of initial values
+  unsigned int range_upper_limit = 1;
   unsigned int num = 0;
   unsigned int iterations = 0;
   printf("Collatz Conjecture\n");
-  printf("Enter an positive integer number: ");
-  scanf("%d", &num);
-  printf("Iteration #%d: %d\n", iterations, num);
-
-  // 2- If the number is odd  => n = 3n+1 elseif even => n = n/2
-  // 3- Repeate step #2 until you are in a 4-2-1 loop
-  while(num !=1){
-    if(num % 2 == 0){
-      num /= 2;
-    }else{
-      num = 3 * num + 1;
+  printf("Enter the upper limit of a range [1, n]: ");
+  scanf("%d", &range_upper_limit);
+  printf("| n | iterations |\n");
+  printf("| --- | --- |\n");
+  int i = 1;
+  for(i; i<=range_upper_limit; i++){
+    num = i;
+    iterations = 0;
+    // 2- If the number is odd  => n = 3n+1 elseif even => n = n/2
+    // 3- Repeate step #2 until you are in a 4-2-1 loop
+    while(num !=1){
+      if(num % 2 == 0){
+        num /= 2;
+      }else{
+        num = 3 * num + 1;
+      }
+      iterations++;
+      //printf("Iteration #%d: %d\n", iterations, num);
     }
-    iterations++;
-    printf("Iteration #%d: %d\n", iterations, num);
+
+    // 4- Find the number of iterations to get from intial n to 1
+    printf("| n = %d | iterations = %d|\n", i, iterations);
   }
-    
-  // 4- Find the number of iterations to get from intial n to 1
-    printf("Totoal number of iterations = %d\n", iterations);
   return 0;
 }
