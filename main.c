@@ -19,18 +19,27 @@
 #include<stdio.h>
 
 int main(void){
-    // Pick a random number n from 1-9 or 1-100
-    unsigned int num = 8;
+  // Pick a random number n from 1-9 or 1-100
+  unsigned int num = 0;
+  unsigned int iterations = 0;
+  printf("Collatz Conjecture\n");
+  printf("Enter an integer number: ");
+  scanf("%d", &num);
+  printf("Iteration #%d: %d\n", iterations, num);
 
-    // 2- If the number is odd  => n = 3n+1 elseif even => n = n/2
+  // 2- If the number is odd  => n = 3n+1 elseif even => n = n/2
+  // 3- Repeate step #2 until you are in a 4-2-1 loop
+  while(num !=1){
     if(num % 2 == 0){
-        num /= 2;
+      num /= 2;
     }else{
-        num = 3* num + 1;
+      num = 3 * num + 1;
     }
-    printf("%d",num);
-    // 3- Repeate step #2 until you are in a 4-2-1 loop
+    iterations++;
+    printf("Iteration #%d: %d\n", iterations, num);
+  }
     
-    // 4- Find the number of iterations to get from intial n to 1
-    return 0;
+  // 4- Find the number of iterations to get from intial n to 1
+    printf("Totoal number of iterations = %d\n", iterations);
+  return 0;
 }
