@@ -41,7 +41,7 @@ int main(void){
       if(num % 2 == 0){
         num /= 2;
       }else{
-        num = 5 * num + 3y;
+        num = 5 * num + 3;
       }
       iterations++;
     }
