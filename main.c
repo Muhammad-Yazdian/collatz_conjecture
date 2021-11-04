@@ -23,18 +23,24 @@ int main(void){
   unsigned int range_upper_limit = 1;
   unsigned int num = 0;
   unsigned int iterations = 0;
+  
   printf("Collatz Conjecture\n");
   printf("Enter the upper limit of a range [1, n]: ");
   scanf("%d", &range_upper_limit);
-  printf("| n | iterations |\n");
-  printf("| --- | --- |\n");
+  
+  FILE* file_out;
+  file_out = fopen("iteration_by_n.txt", "w");
+  
+  if(file_out){
+    fprintf(file_out, "n\tIteration\n");
+  }
+
   int i = 1;
   for(i; i<=range_upper_limit; i++){
     num = i;
     iterations = 0;
-    // 2- If the number is odd  => n = 3n+1 elseif even => n = n/2
-    // 3- Repeate step #2 until you are in a 4-2-1 loop
     while(num !=1){
+      // Apply Collatz conjecture rules
       if(num % 2 == 0){
         num /= 2;
       }else{
@@ -43,9 +49,8 @@ int main(void){
       iterations++;
       //printf("Iteration #%d: %d\n", iterations, num);
     }
-
-    // 4- Find the number of iterations to get from intial n to 1
-    printf("| n = %d | iterations = %d|\n", i, iterations);
+    // Number of iterations for each value
+    fprintf(file_out, "%d\t%d\n", i, iterations);
   }
   return 0;
 }
