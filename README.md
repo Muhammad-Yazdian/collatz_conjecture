@@ -20,6 +20,9 @@ Use this code to test your own number and see if it reaches to 1 or not.
 - [List of unsolved problems in mathematics](https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics)
 
 # Example (for n from 1 to 1000)
+![iterration by n](https://github.com/Muhammad-Yazdian/collatz_conjecture/blob/range-of-values/iteration_by_n_1000.PNG)
+
+
 | n | iterations |
 | --- | --- |
 | n = 1 | iterations = 0|
