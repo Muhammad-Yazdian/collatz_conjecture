@@ -19,3 +19,6 @@ Despite its simple rules, the Collatz conjecture is still **an unsolved mathemat
 - Proposed by Lothar Collatz in 1937
 - [More about Collatz Conjecture on Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture)
 - [List of unsolved problems in mathematics](https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics)
+
+# Example
+![iterration by n](https://github.com/Muhammad-Yazdian/collatz_conjecture/blob/range-of-values/iteration_by_n_1000.PNG)
