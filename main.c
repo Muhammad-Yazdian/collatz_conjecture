@@ -19,7 +19,7 @@
 #include<stdio.h>
 
 int main(void){
-  // Pick a random number n from 1-9 or 1-100
+  // Test for numbers 1 to 10
   unsigned int num = 0;
   unsigned int iterations = 0;
   printf("Collatz Conjecture\n");
