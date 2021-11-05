@@ -6,40 +6,38 @@
  * 
  * Summary of File: 
  * 
- *   This file contains code which creates Collatz Conjecture (a.k.a 3n+1)
+ *   This file contains code which creates ending sequence of Collatz 
+ *   Conjecture (a.k.a 3n+1) using back propagation technique
  *
- * Development Steps:
- *   1- Pick a random number n from 1-9 or 1-100
- *   2- If the number is 
- *        - odd  => n = 3n+1
- *        - even => n = n/2
- *   3- Repeate step #2 until you are in a 4-2-1 loop
- *   4- Find the number of iterations to get from intial n to 1
  */
 #include<stdio.h>
+#include<stdlib.h>
 
 int main(void){
-  // Get user input
-  unsigned int num = 0;
-  unsigned int iterations = 0;
-  printf("Collatz Conjecture\n");
-  printf("Enter an positive integer number: ");
-  scanf("%d", &num);
-  printf("Iteration #%d: %d\n", iterations, num);
-
-  // 2- If the number is odd  => n = 3n+1 elseif even => n = n/2
-  // 3- Repeate step #2 until you are in a 4-2-1 loop
-  while(num !=1){
-    if(num % 2 == 0){
-      num /= 2;
-    }else{
-      num = 3 * num + 1;
-    }
-    iterations++;
-    printf("Iteration #%d: %d\n", iterations, num);
+  // Start with number 1
+  unsigned int num = 1;
+  unsigned int num_a = 1;
+  unsigned int num_b = 1;
+  unsigned int stop_num = 10;
+  FILE* file;
+  file = fopen("temp.txt", "a+");
+  if (!file){
+    printf("Error: Could not find the file!\n");
+    exit(-1);
   }
-    
-  // 4- Find the number of iterations to get from intial n to 1
-    printf("Totoal number of iterations = %d\n", iterations);
+  //fseek(file, 0, SEEK_SET );
+  while (fscanf(file, "%d, ", &num) != EOF){
+    printf("Reading ... %d\n", num);
+  }
+  num_a = num;
+  num_b = num;
+  fprintf(file, "\n");
+  if ((num_a - 1) % 3 == 0 && num_a !=1){
+    num_a = (num_a - 1) / 3;
+    fprintf(file, "%d, ", num_a);
+  }
+  num_b = num_b * 2;
+  fprintf(file, "%d, ", num_b);
+  fclose(file);
   return 0;
 }
