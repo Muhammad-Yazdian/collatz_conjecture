@@ -18,11 +18,10 @@ int main(void){
   unsigned int num = 1;
   unsigned int num_a = 1;
   unsigned int num_b = 1;
-  unsigned int stop_num = 10;
   FILE* file;
-  file = fopen("temp.txt", "a+");
+  file = fopen("temp.txt", "r");
   if (!file){
-    printf("Error: Could not find the file!\n");
+    fprintf(stderr, "Error: Could not find the file!\n");
     exit(-1);
   }
   //fseek(file, 0, SEEK_SET );
