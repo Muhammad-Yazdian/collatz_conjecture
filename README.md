@@ -11,9 +11,12 @@ Despite its simple rules, the Collatz conjecture is still **an unsolved mathemat
 **Paul Erdős** said:
 > Mathematics may not be ready for such problems.
 
-# This code
-- Use this code to test your own number and see if it reaches to 1 or not.
-- Use [the range-of-values branch](https://github.com/Muhammad-Yazdian/collatz_conjecture/tree/range-of-values) to test a range of numbers. 
+# This Branch
+- Using back propagation, we are interested to find the structure of the ending
+sequence (e.g. 4, 2, 1).  
+- To do so, we can simply reverse the original rules:  
+  - n = 2 * n or  
+  - n = (n - 1) / 3
 
 # More
 - Proposed by Lothar Collatz in 1937
